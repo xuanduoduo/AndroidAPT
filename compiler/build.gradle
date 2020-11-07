@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':annotation')
+    implementation 'com.squareup:javapoet:1.11.1'
+    //noinspection AnnotationProcessorOnCompilePath
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
